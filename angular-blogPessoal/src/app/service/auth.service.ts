@@ -13,7 +13,7 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  login(userLogin: UserLogin): Observable<UserLogin>{
+  login(userLogin: UserLogin): Observable<UserLogin>{           //conexão com o back é feita
     return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
   }
 

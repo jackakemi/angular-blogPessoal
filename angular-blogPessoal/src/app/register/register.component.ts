@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
   }
 
   confirmSenha(event: any) {
-    this.confirmSenha = event.target.value
+    this.confirmarSenha = event.target.value
   }
 
   tipoUser(event: any) {
