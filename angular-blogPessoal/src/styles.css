@@ -3,3 +3,11 @@
 html{
     scroll-behavior: smooth;
 }
+
+.titulo{
+    font-size: 54pt;
+}
+
+.subtitulo{
+    font-size: 18pt;
+}
