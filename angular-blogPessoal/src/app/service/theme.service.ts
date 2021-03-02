@@ -21,6 +21,10 @@ export class ThemeService {
     return this.http.get<Tema[]>('http://localhost:8080/tema', this.token)
   }
 
+  getByIdTheme(id: number): Observable<Tema>{
+    return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token)
+  }
+
   postTheme(tema: Tema): Observable<Tema>{
     return this.http.post<Tema>('http://localhost:8080/tema', tema, this.token)
   }
