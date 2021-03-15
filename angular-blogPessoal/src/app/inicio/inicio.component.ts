@@ -44,7 +44,7 @@ export class InicioComponent implements OnInit {
   }
 
   getAllTheme(){
-    this.themeService.getAllTheme().subscribe((resp: Tema[])=>{
+    this.themeService.getAllTheme().subscribe((resp: Tema[])=>{   //chamar essa funçaõ dentro do botão selecionar
       this.listaTemas = resp
     })
   }
@@ -74,11 +74,11 @@ export class InicioComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
 
-    this.postService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{
+    this.postService.postPostagem(this.postagem).subscribe((resp: Postagem)=>{    //entra na pasta service, pega o metodo post, passa pra ele oq precisa pra postar, subscreva o typescript pra Json e envia a postagem
       this.postagem = resp
       alert('Postagem realizada com sucesso!')
-      this.postagem = new Postagem()
-      this.getAllPost()
+      this.postagem = new Postagem() // zerar o campo de postagem
+      this.getAllPost()   //atualizar com as novas postagens
     })
   }
 
